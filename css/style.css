@@ -567,6 +567,178 @@ body {
   }
 }
 
+.tablet {
+  position: relative;
+  -webkit-animation: appearance 0.5s linear 0s 1 normal forwards;
+          animation: appearance 0.5s linear 0s 1 normal forwards;
+  margin-top: 15px;
+}
+
+.tablet__main {
+  background: url("../img/tablet/tablet.png") center center/contain no-repeat;
+  width: 439px;
+  height: 574px;
+  position: relative;
+  z-index: 2;
+}
+
+.tablet__text-purple {
+  background: url("../img/tablet/purpleText.png") 0 0/cover no-repeat;
+  width: 123px;
+  height: 112px;
+  bottom: 124px;
+  left: 94px;
+  position: absolute;
+  z-index: 3;
+  -webkit-animation: tablet-p-text 0.5s linear 0.6s 1 normal forwards;
+          animation: tablet-p-text 0.5s linear 0.6s 1 normal forwards;
+}
+
+.tablet__text-white {
+  background: url("../img/tablet/textWhite.png") center center/contain no-repeat;
+  width: 123px;
+  height: 112px;
+  bottom: 124px;
+  right: 87px;
+  position: absolute;
+  opacity: 0;
+  z-index: 3;
+  -webkit-animation: appearance 0.4s linear 0.3s 1 normal forwards;
+          animation: appearance 0.4s linear 0.3s 1 normal forwards;
+}
+
+.tablet__block {
+  background: url("../img/tablet/block.png") center center/contain no-repeat;
+  width: 263px;
+  height: 99px;
+  top: 134px;
+  left: 93px;
+  position: absolute;
+  z-index: 3;
+  -webkit-animation: tablet-block 0.4s linear 1.9s 1 normal forwards;
+          animation: tablet-block 0.4s linear 1.9s 1 normal forwards;
+}
+
+.tablet__border {
+  background: url("../img/tablet/border.png") center center/contain no-repeat;
+  width: 137px;
+  height: 94px;
+  bottom: 242px;
+  right: 79px;
+  position: absolute;
+  z-index: 3;
+  -webkit-animation: tablet-border 0.4s linear 1.9s 1 normal forwards;
+          animation: tablet-border 0.4s linear 1.9s 1 normal forwards;
+}
+
+.tablet__like {
+  background: url("../img/tablet/like.png") center center/contain no-repeat;
+  width: 81px;
+  height: 71px;
+  top: 7px;
+  right: 119px;
+  position: absolute;
+  opacity: 0;
+  z-index: 3;
+  -webkit-animation: appearance 0.4s linear 1s 1 normal forwards;
+          animation: appearance 0.4s linear 1s 1 normal forwards;
+}
+
+.tablet__text {
+  background: url("../img/tablet/text.png") center center/contain no-repeat;
+  width: 76px;
+  height: 32px;
+  top: 197px;
+  right: 116px;
+  position: absolute;
+  z-index: 3;
+  -webkit-animation: tablet-text 0.4s linear 1.3s 1 normal forwards;
+          animation: tablet-text 0.4s linear 1.3s 1 normal forwards;
+}
+
+.tablet__gear {
+  background: url("../img/tablet/gear.png") center center/contain no-repeat;
+  width: 67px;
+  height: 67px;
+  bottom: 40px;
+  left: 109px;
+  position: absolute;
+  opacity: 0;
+  z-index: 3;
+  -webkit-animation: appearance 0.4s linear 1.6s 1 normal forwards;
+          animation: appearance 0.4s linear 1.6s 1 normal forwards;
+}
+
+@-webkit-keyframes tablet-p-text {
+  80% {
+    opacity: 1;
+    z-index: 3;
+  }
+  100% {
+    width: 104px;
+    height: 129px;
+    bottom: 129px;
+    left: -11px;
+    z-index: 1;
+    opacity: 0.7;
+  }
+}
+
+@keyframes tablet-p-text {
+  80% {
+    opacity: 1;
+    z-index: 3;
+  }
+  100% {
+    width: 104px;
+    height: 129px;
+    bottom: 129px;
+    left: -11px;
+    z-index: 1;
+    opacity: 0.7;
+  }
+}
+
+@-webkit-keyframes tablet-text {
+  100% {
+    right: -36px;
+    opacity: 0.7;
+  }
+}
+
+@keyframes tablet-text {
+  100% {
+    right: -36px;
+    opacity: 0.7;
+  }
+}
+
+@-webkit-keyframes tablet-block {
+  100% {
+    left: 40px;
+  }
+}
+
+@keyframes tablet-block {
+  100% {
+    left: 40px;
+  }
+}
+
+@-webkit-keyframes tablet-border {
+  100% {
+    bottom: 197px;
+    right: -20px;
+  }
+}
+
+@keyframes tablet-border {
+  100% {
+    bottom: 197px;
+    right: -20px;
+  }
+}
+
 .container {
   max-width: 1200px;
   padding: 0 10px;
@@ -594,6 +766,11 @@ body {
         -ms-transform: scale(0.9);
             transform: scale(0.9);
   }
+  .tablet {
+    -webkit-transform: scale(0.85);
+        -ms-transform: scale(0.85);
+            transform: scale(0.85);
+  }
 }
 
 @media (max-width: 992px) {
@@ -606,6 +783,11 @@ body {
             transform: scale(0.8);
   }
   .phone {
+    -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  .tablet {
     -webkit-transform: scale(0.8);
         -ms-transform: scale(0.8);
             transform: scale(0.8);
@@ -659,5 +841,10 @@ body {
     -webkit-transform: scale(0.6);
         -ms-transform: scale(0.6);
             transform: scale(0.6);
+  }
+  .tablet {
+    -webkit-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+            transform: scale(0.7);
   }
 }
