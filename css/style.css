@@ -30,13 +30,6 @@ body {
   overflow: hidden;
 }
 
-.devices-section:nth-child(2n) .row {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-}
-
 .row {
   margin: 100px 0;
   display: -webkit-box;
@@ -50,8 +43,52 @@ body {
           justify-content: center;
 }
 
-.desktop {
+.column {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
+  padding: 10px 0;
+}
+
+.column:first-child {
+  background-color: #5750ad;
+}
+
+.text {
+  margin: 20px;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.play-animation {
+  border: 1px solid #4c4596;
+  border-radius: 10px;
+  background-color: #5750ad;
+  display: block;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.desktop {
+  position: absolute;
+  opacity: 0;
+  -webkit-animation: change-slide 2s linear 0s 1 normal backwards, appearance 0.5s linear 9.9s 1 normal forwards;
+          animation: change-slide 2s linear 0s 1 normal backwards, appearance 0.5s linear 9.9s 1 normal forwards;
 }
 
 .desktop__laptop {
@@ -60,8 +97,6 @@ body {
   height: 293.5px;
   position: relative;
   z-index: 2;
-  -webkit-animation: appearance 0.5s linear 0s 1 normal forwards;
-          animation: appearance 0.5s linear 0s 1 normal forwards;
 }
 
 .desktop__text {
@@ -73,8 +108,10 @@ body {
   right: 58.8px;
   height: 85px;
   opacity: 0;
-  -webkit-animation: appearance 0.4s linear 0.4s 1 normal forwards, text-move 0.7s linear 1.2s 1 normal forwards;
-          animation: appearance 0.4s linear 0.4s 1 normal forwards, text-move 0.7s linear 1.2s 1 normal forwards;
+  -webkit-animation: appearance 0.4s linear 0.4s 1 normal forwards,
+ text-move 0.5s linear 1.2s 1 normal forwards;
+          animation: appearance 0.4s linear 0.4s 1 normal forwards,
+ text-move 0.5s linear 1.2s 1 normal forwards;
 }
 
 .desktop__letter {
@@ -111,8 +148,8 @@ body {
   top: 65.9px;
   left: 58.8px;
   z-index: 3;
-  -webkit-animation: appearance 0.5s linear 0s 1 normal forwards, video-move 0.7s linear 1.2s 1 normal forwards;
-          animation: appearance 0.5s linear 0s 1 normal forwards, video-move 0.7s linear 1.2s 1 normal forwards;
+  -webkit-animation: video-move 0.5s linear 1.2s 1 normal forwards;
+          animation: video-move 0.5s linear 1.2s 1 normal forwards;
 }
 
 .desktop__block {
@@ -123,37 +160,48 @@ body {
   top: 0;
   left: 87px;
   z-index: -1;
-  -webkit-animation: block-move 0.7s linear 1.2s 1 normal forwards;
-          animation: block-move 0.7s linear 1.2s 1 normal forwards;
+  -webkit-animation: block-move 0.5s linear 1.2s 1 normal forwards;
+          animation: block-move 0.5s linear 1.2s 1 normal forwards;
 }
 
-.column {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 50%;
-          flex: 1 1 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+@-webkit-keyframes change-slide {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+  }
+  15% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
 }
 
-.column:first-child {
-  background-color: #5750ad;
-}
-
-.text {
-  margin: 20px;
-  font-size: 18px;
-  line-height: 21px;
+@keyframes change-slide {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+  }
+  15% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
 }
 
 @-webkit-keyframes appearance {
@@ -223,9 +271,10 @@ body {
 }
 
 .watch {
-  -webkit-animation: appearance 0.5s linear 0s 1 normal forwards;
-          animation: appearance 0.5s linear 0s 1 normal forwards;
-  position: relative;
+  opacity: 0;
+  position: absolute;
+  -webkit-animation: change-slide 2.7s linear 7.2s 1 normal forwards;
+          animation: change-slide 2.7s linear 7.2s 1 normal forwards;
 }
 
 .watch__main {
@@ -243,8 +292,8 @@ body {
   bottom: 107px;
   right: 158px;
   position: absolute;
-  -webkit-animation: screen1 0.5s linear 0.5s 1 normal forwards;
-          animation: screen1 0.5s linear 0.5s 1 normal forwards;
+  -webkit-animation: screen1 0.5s linear 7.7s 1 normal forwards;
+          animation: screen1 0.5s linear 7.7s 1 normal forwards;
   z-index: 4;
 }
 
@@ -255,8 +304,8 @@ body {
   bottom: 107px;
   right: 158px;
   position: absolute;
-  -webkit-animation: screen2 0.5s linear 1s 1 normal forwards;
-          animation: screen2 0.5s linear 1s 1 normal forwards;
+  -webkit-animation: screen2 0.5s linear 8.2s 1 normal forwards;
+          animation: screen2 0.5s linear 8.2s 1 normal forwards;
   z-index: 3;
 }
 
@@ -267,8 +316,8 @@ body {
   bottom: 107px;
   right: 158px;
   position: absolute;
-  -webkit-animation: screen3 0.5s linear 1.8s 1 normal forwards;
-          animation: screen3 0.5s linear 1.8s 1 normal forwards;
+  -webkit-animation: screen3 0.5s linear 9s 1 normal forwards;
+          animation: screen3 0.5s linear 9s 1 normal forwards;
   z-index: 1;
 }
 
@@ -280,8 +329,8 @@ body {
   bottom: 186px;
   right: 174px;
   z-index: 2;
-  -webkit-animation: watch-block 0.3s linear 1.5s 1 normal forwards;
-          animation: watch-block 0.3s linear 1.5s 1 normal forwards;
+  -webkit-animation: watch-block 0.3s linear 8.7s 1 normal forwards;
+          animation: watch-block 0.3s linear 8.7s 1 normal forwards;
 }
 
 .watch__red-btn {
@@ -293,8 +342,8 @@ body {
   left: 115px;
   z-index: 3;
   opacity: 0;
-  -webkit-animation: appearance 0.5s linear 1.6s 1 normal forwards;
-          animation: appearance 0.5s linear 1.6s 1 normal forwards;
+  -webkit-animation: appearance 0.5s linear 8.9s 1 normal forwards;
+          animation: appearance 0.5s linear 8.9s 1 normal forwards;
 }
 
 @-webkit-keyframes screen1 {
@@ -396,9 +445,10 @@ body {
 }
 
 .phone {
-  position: relative;
-  -webkit-animation: appearance 0.5s linear 0s 1 normal forwards;
-          animation: appearance 0.5s linear 0s 1 normal forwards;
+  opacity: 0;
+  position: absolute;
+  -webkit-animation: change-slide 2.4s linear 2.2s 1 normal forwards;
+          animation: change-slide 2.4s linear 2.2s 1 normal forwards;
 }
 
 .phone__main {
@@ -417,8 +467,8 @@ body {
   right: 86px;
   position: absolute;
   z-index: 3;
-  -webkit-animation: text-purple 0.5s linear 1.2s 1 normal forwards;
-          animation: text-purple 0.5s linear 1.2s 1 normal forwards;
+  -webkit-animation: text-purple 0.5s linear 3.4s 1 normal forwards;
+          animation: text-purple 0.5s linear 3.4s 1 normal forwards;
 }
 
 .phone__text-white {
@@ -429,8 +479,8 @@ body {
   right: 88px;
   position: absolute;
   z-index: 3;
-  -webkit-animation: text-white 0.4s linear 1.6s 1 normal forwards;
-          animation: text-white 0.4s linear 1.6s 1 normal forwards;
+  -webkit-animation: text-white 0.4s linear 3.8s 1 normal forwards;
+          animation: text-white 0.4s linear 3.8s 1 normal forwards;
 }
 
 .phone__input {
@@ -441,8 +491,8 @@ body {
   left: 91px;
   position: absolute;
   z-index: 3;
-  -webkit-animation: input 0.4s linear 1.6s 1 normal forwards;
-          animation: input 0.4s linear 1.6s 1 normal forwards;
+  -webkit-animation: input 0.4s linear 3.8s 1 normal forwards;
+          animation: input 0.4s linear 3.8s 1 normal forwards;
 }
 
 .phone__video {
@@ -453,8 +503,8 @@ body {
   left: 91px;
   position: absolute;
   z-index: 3;
-  -webkit-animation: video-phone 0.5s linear 0.8s 1 normal forwards;
-          animation: video-phone 0.5s linear 0.8s 1 normal forwards;
+  -webkit-animation: video-phone 0.5s linear 3s 1 normal forwards;
+          animation: video-phone 0.5s linear 3s 1 normal forwards;
 }
 
 .phone__circle-red {
@@ -466,8 +516,8 @@ body {
   position: absolute;
   opacity: 0;
   z-index: 3;
-  -webkit-animation: appearance 0.5s linear 0.3s 1 normal forwards;
-          animation: appearance 0.5s linear 0.3s 1 normal forwards;
+  -webkit-animation: appearance 0.5s linear 2.5s 1 normal forwards;
+          animation: appearance 0.5s linear 2.5s 1 normal forwards;
 }
 
 .phone__circle-purple {
@@ -479,8 +529,8 @@ body {
   position: absolute;
   opacity: 0;
   z-index: 3;
-  -webkit-animation: appearance 0.5s linear 0.5s 1 normal forwards;
-          animation: appearance 0.5s linear 0.5s 1 normal forwards;
+  -webkit-animation: appearance 0.5s linear 2.7s 1 normal forwards;
+          animation: appearance 0.5s linear 2.7s 1 normal forwards;
 }
 
 @-webkit-keyframes video-phone {
@@ -568,10 +618,10 @@ body {
 }
 
 .tablet {
+  opacity: 0;
   position: relative;
-  -webkit-animation: appearance 0.5s linear 0s 1 normal forwards;
-          animation: appearance 0.5s linear 0s 1 normal forwards;
-  margin-top: 15px;
+  -webkit-animation: change-slide 2.6s linear 4.6s 1 normal forwards;
+          animation: change-slide 2.6s linear 4.6s 1 normal forwards;
 }
 
 .tablet__main {
@@ -590,8 +640,8 @@ body {
   left: 94px;
   position: absolute;
   z-index: 3;
-  -webkit-animation: tablet-p-text 0.5s linear 0.6s 1 normal forwards;
-          animation: tablet-p-text 0.5s linear 0.6s 1 normal forwards;
+  -webkit-animation: tablet-p-text 0.5s linear 5.2s 1 normal forwards;
+          animation: tablet-p-text 0.5s linear 5.2s 1 normal forwards;
 }
 
 .tablet__text-white {
@@ -603,8 +653,8 @@ body {
   position: absolute;
   opacity: 0;
   z-index: 3;
-  -webkit-animation: appearance 0.4s linear 0.3s 1 normal forwards;
-          animation: appearance 0.4s linear 0.3s 1 normal forwards;
+  -webkit-animation: appearance 0.4s linear 4.9s 1 normal forwards;
+          animation: appearance 0.4s linear 4.9s 1 normal forwards;
 }
 
 .tablet__block {
@@ -615,8 +665,8 @@ body {
   left: 93px;
   position: absolute;
   z-index: 3;
-  -webkit-animation: tablet-block 0.4s linear 1.9s 1 normal forwards;
-          animation: tablet-block 0.4s linear 1.9s 1 normal forwards;
+  -webkit-animation: tablet-block 0.4s linear 6.5s 1 normal forwards;
+          animation: tablet-block 0.4s linear 6.5s 1 normal forwards;
 }
 
 .tablet__border {
@@ -627,8 +677,8 @@ body {
   right: 79px;
   position: absolute;
   z-index: 3;
-  -webkit-animation: tablet-border 0.4s linear 1.9s 1 normal forwards;
-          animation: tablet-border 0.4s linear 1.9s 1 normal forwards;
+  -webkit-animation: tablet-border 0.4s linear 6.5s 1 normal forwards;
+          animation: tablet-border 0.4s linear 6.5s 1 normal forwards;
 }
 
 .tablet__like {
@@ -640,8 +690,8 @@ body {
   position: absolute;
   opacity: 0;
   z-index: 3;
-  -webkit-animation: appearance 0.4s linear 1s 1 normal forwards;
-          animation: appearance 0.4s linear 1s 1 normal forwards;
+  -webkit-animation: appearance 0.4s linear 5.6s 1 normal forwards;
+          animation: appearance 0.4s linear 5.6s 1 normal forwards;
 }
 
 .tablet__text {
@@ -652,8 +702,8 @@ body {
   right: 116px;
   position: absolute;
   z-index: 3;
-  -webkit-animation: tablet-text 0.4s linear 1.3s 1 normal forwards;
-          animation: tablet-text 0.4s linear 1.3s 1 normal forwards;
+  -webkit-animation: tablet-text 0.4s linear 5.9s 1 normal forwards;
+          animation: tablet-text 0.4s linear 5.9s 1 normal forwards;
 }
 
 .tablet__gear {
@@ -665,8 +715,8 @@ body {
   position: absolute;
   opacity: 0;
   z-index: 3;
-  -webkit-animation: appearance 0.4s linear 1.6s 1 normal forwards;
-          animation: appearance 0.4s linear 1.6s 1 normal forwards;
+  -webkit-animation: appearance 0.4s linear 6.2s 1 normal forwards;
+          animation: appearance 0.4s linear 6.2s 1 normal forwards;
 }
 
 @-webkit-keyframes tablet-p-text {
@@ -792,17 +842,16 @@ body {
         -ms-transform: scale(0.8);
             transform: scale(0.8);
   }
+  .watch {
+    -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
+  }
 }
 
 @media (max-width: 768px) {
   .container {
     max-width: 540px;
-  }
-  .devices-section:nth-child(2n) .row {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
   .row {
     -webkit-box-orient: vertical;
@@ -815,11 +864,6 @@ body {
     -webkit-transform: scale(0.7);
         -ms-transform: scale(0.7);
             transform: scale(0.7);
-  }
-  .watch {
-    -webkit-transform: scale(0.8);
-        -ms-transform: scale(0.8);
-            transform: scale(0.8);
   }
 }
 
@@ -843,8 +887,8 @@ body {
             transform: scale(0.6);
   }
   .tablet {
-    -webkit-transform: scale(0.7);
-        -ms-transform: scale(0.7);
-            transform: scale(0.7);
+    -webkit-transform: scale(0.55);
+        -ms-transform: scale(0.55);
+            transform: scale(0.55);
   }
 }
