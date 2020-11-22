@@ -86,10 +86,9 @@ body {
 
 .desktop {
   position: absolute;
-  opacity: 0;
-  -webkit-animation: change-slide 2s linear 0s 1 normal backwards,
+  -webkit-animation: change-slide 2s linear 0s 1 normal forwards,
     appearance 0.5s linear 9.9s 1 normal forwards;
-  animation: change-slide 2s linear 0s 1 normal backwards,
+  animation: change-slide 2s linear 0s 1 normal forwards,
     appearance 0.5s linear 9.9s 1 normal forwards;
 }
 
