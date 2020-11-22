@@ -36,30 +36,30 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .column {
   -webkit-box-flex: 1;
-  -ms-flex: 1 1 50%;
-  flex: 1 1 50%;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
   padding: 10px 0;
 }
@@ -76,20 +76,19 @@ body {
 
 .play-animation {
   border: 1px solid #4c4596;
+  cursor: pointer;
   border-radius: 10px;
   background-color: #5750ad;
   display: block;
   color: #fff;
   padding: 10px 20px;
-  cursor: pointer;
 }
 
 .desktop {
   position: absolute;
-  -webkit-animation: change-slide 2s linear 0s 1 normal forwards,
-    appearance 0.5s linear 9.9s 1 normal forwards;
-  animation: change-slide 2s linear 0s 1 normal forwards,
-    appearance 0.5s linear 9.9s 1 normal forwards;
+  opacity: 0;
+  -webkit-animation: change-slide 2s linear 0s 1 normal forwards, appearance 0.5s linear 9.9s 1 normal forwards;
+          animation: change-slide 2s linear 0s 1 normal forwards, appearance 0.5s linear 9.9s 1 normal forwards;
 }
 
 .desktop__laptop {
@@ -109,10 +108,8 @@ body {
   right: 58.8px;
   height: 85px;
   opacity: 0;
-  -webkit-animation: appearance 0.4s linear 0.4s 1 normal forwards,
-    text-move 0.5s linear 1.2s 1 normal forwards;
-  animation: appearance 0.4s linear 0.4s 1 normal forwards,
-    text-move 0.5s linear 1.2s 1 normal forwards;
+  -webkit-animation: appearance 0.4s linear 0.4s 1 normal forwards, text-move 0.5s linear 1.2s 1 normal forwards;
+          animation: appearance 0.4s linear 0.4s 1 normal forwards, text-move 0.5s linear 1.2s 1 normal forwards;
 }
 
 .desktop__letter {
@@ -125,7 +122,7 @@ body {
   z-index: 4;
   opacity: 0;
   -webkit-animation: appearance 0.4s linear 0.7s 1 normal forwards;
-  animation: appearance 0.4s linear 0.7s 1 normal forwards;
+          animation: appearance 0.4s linear 0.7s 1 normal forwards;
 }
 
 .desktop__lifebuoy {
@@ -138,7 +135,7 @@ body {
   z-index: 3;
   opacity: 0;
   -webkit-animation: appearance 0.4s linear 1s 1 normal forwards;
-  animation: appearance 0.4s linear 1s 1 normal forwards;
+          animation: appearance 0.4s linear 1s 1 normal forwards;
 }
 
 .desktop__video {
@@ -150,7 +147,7 @@ body {
   left: 58.8px;
   z-index: 3;
   -webkit-animation: video-move 0.5s linear 1.2s 1 normal forwards;
-  animation: video-move 0.5s linear 1.2s 1 normal forwards;
+          animation: video-move 0.5s linear 1.2s 1 normal forwards;
 }
 
 .desktop__block {
@@ -162,17 +159,10 @@ body {
   left: 87px;
   z-index: -1;
   -webkit-animation: block-move 0.5s linear 1.2s 1 normal forwards;
-  animation: block-move 0.5s linear 1.2s 1 normal forwards;
+          animation: block-move 0.5s linear 1.2s 1 normal forwards;
 }
 
 @-webkit-keyframes change-slide {
-  0% {
-    display: none;
-    opacity: 0;
-  }
-  1% {
-    display: block;
-  }
   15% {
     opacity: 1;
   }
@@ -180,19 +170,11 @@ body {
     opacity: 1;
   }
   100% {
-    display: none;
     opacity: 0;
   }
 }
 
 @keyframes change-slide {
-  0% {
-    display: none;
-    opacity: 0;
-  }
-  1% {
-    display: block;
-  }
   15% {
     opacity: 1;
   }
@@ -200,7 +182,6 @@ body {
     opacity: 1;
   }
   100% {
-    display: none;
     opacity: 0;
   }
 }
@@ -275,7 +256,7 @@ body {
   opacity: 0;
   position: absolute;
   -webkit-animation: change-slide 2.7s linear 7.2s 1 normal forwards;
-  animation: change-slide 2.7s linear 7.2s 1 normal forwards;
+          animation: change-slide 2.7s linear 7.2s 1 normal forwards;
 }
 
 .watch__main {
@@ -294,7 +275,7 @@ body {
   right: 158px;
   position: absolute;
   -webkit-animation: screen1 0.5s linear 7.7s 1 normal forwards;
-  animation: screen1 0.5s linear 7.7s 1 normal forwards;
+          animation: screen1 0.5s linear 7.7s 1 normal forwards;
   z-index: 4;
 }
 
@@ -306,7 +287,7 @@ body {
   right: 158px;
   position: absolute;
   -webkit-animation: screen2 0.5s linear 8.2s 1 normal forwards;
-  animation: screen2 0.5s linear 8.2s 1 normal forwards;
+          animation: screen2 0.5s linear 8.2s 1 normal forwards;
   z-index: 3;
 }
 
@@ -318,13 +299,12 @@ body {
   right: 158px;
   position: absolute;
   -webkit-animation: screen3 0.5s linear 9s 1 normal forwards;
-  animation: screen3 0.5s linear 9s 1 normal forwards;
+          animation: screen3 0.5s linear 9s 1 normal forwards;
   z-index: 1;
 }
 
 .watch__block {
-  background: url("../img/watch/blockRedBtn.png") center center/contain
-    no-repeat;
+  background: url("../img/watch/blockRedBtn.png") center center/contain no-repeat;
   width: 157.1px;
   height: 44.6px;
   position: absolute;
@@ -332,7 +312,7 @@ body {
   right: 174px;
   z-index: 2;
   -webkit-animation: watch-block 0.3s linear 8.7s 1 normal forwards;
-  animation: watch-block 0.3s linear 8.7s 1 normal forwards;
+          animation: watch-block 0.3s linear 8.7s 1 normal forwards;
 }
 
 .watch__red-btn {
@@ -345,7 +325,7 @@ body {
   z-index: 3;
   opacity: 0;
   -webkit-animation: appearance 0.5s linear 8.9s 1 normal forwards;
-  animation: appearance 0.5s linear 8.9s 1 normal forwards;
+          animation: appearance 0.5s linear 8.9s 1 normal forwards;
 }
 
 @-webkit-keyframes screen1 {
@@ -450,7 +430,7 @@ body {
   opacity: 0;
   position: absolute;
   -webkit-animation: change-slide 2.4s linear 2.2s 1 normal forwards;
-  animation: change-slide 2.4s linear 2.2s 1 normal forwards;
+          animation: change-slide 2.4s linear 2.2s 1 normal forwards;
 }
 
 .phone__main {
@@ -470,7 +450,7 @@ body {
   position: absolute;
   z-index: 3;
   -webkit-animation: text-purple 0.5s linear 3.4s 1 normal forwards;
-  animation: text-purple 0.5s linear 3.4s 1 normal forwards;
+          animation: text-purple 0.5s linear 3.4s 1 normal forwards;
 }
 
 .phone__text-white {
@@ -482,7 +462,7 @@ body {
   position: absolute;
   z-index: 3;
   -webkit-animation: text-white 0.4s linear 3.8s 1 normal forwards;
-  animation: text-white 0.4s linear 3.8s 1 normal forwards;
+          animation: text-white 0.4s linear 3.8s 1 normal forwards;
 }
 
 .phone__input {
@@ -494,7 +474,7 @@ body {
   position: absolute;
   z-index: 3;
   -webkit-animation: input 0.4s linear 3.8s 1 normal forwards;
-  animation: input 0.4s linear 3.8s 1 normal forwards;
+          animation: input 0.4s linear 3.8s 1 normal forwards;
 }
 
 .phone__video {
@@ -506,7 +486,7 @@ body {
   position: absolute;
   z-index: 3;
   -webkit-animation: video-phone 0.5s linear 3s 1 normal forwards;
-  animation: video-phone 0.5s linear 3s 1 normal forwards;
+          animation: video-phone 0.5s linear 3s 1 normal forwards;
 }
 
 .phone__circle-red {
@@ -519,12 +499,11 @@ body {
   opacity: 0;
   z-index: 3;
   -webkit-animation: appearance 0.5s linear 2.5s 1 normal forwards;
-  animation: appearance 0.5s linear 2.5s 1 normal forwards;
+          animation: appearance 0.5s linear 2.5s 1 normal forwards;
 }
 
 .phone__circle-purple {
-  background: url("../img/phone/purpleCircle.png") center center/contain
-    no-repeat;
+  background: url("../img/phone/purpleCircle.png") center center/contain no-repeat;
   width: 67px;
   height: 67px;
   bottom: 109px;
@@ -533,7 +512,7 @@ body {
   opacity: 0;
   z-index: 3;
   -webkit-animation: appearance 0.5s linear 2.7s 1 normal forwards;
-  animation: appearance 0.5s linear 2.7s 1 normal forwards;
+          animation: appearance 0.5s linear 2.7s 1 normal forwards;
 }
 
 @-webkit-keyframes video-phone {
@@ -624,7 +603,7 @@ body {
   opacity: 0;
   position: relative;
   -webkit-animation: change-slide 2.6s linear 4.6s 1 normal forwards;
-  animation: change-slide 2.6s linear 4.6s 1 normal forwards;
+          animation: change-slide 2.6s linear 4.6s 1 normal forwards;
 }
 
 .tablet__main {
@@ -636,7 +615,7 @@ body {
 }
 
 .tablet__text-purple {
-  background: url("../img/tablet/purpleText.png") 0 0 / cover no-repeat;
+  background: url("../img/tablet/purpleText.png") 0 0/cover no-repeat;
   width: 123px;
   height: 112px;
   bottom: 124px;
@@ -644,7 +623,7 @@ body {
   position: absolute;
   z-index: 3;
   -webkit-animation: tablet-p-text 0.5s linear 5.2s 1 normal forwards;
-  animation: tablet-p-text 0.5s linear 5.2s 1 normal forwards;
+          animation: tablet-p-text 0.5s linear 5.2s 1 normal forwards;
 }
 
 .tablet__text-white {
@@ -657,7 +636,7 @@ body {
   opacity: 0;
   z-index: 3;
   -webkit-animation: appearance 0.4s linear 4.9s 1 normal forwards;
-  animation: appearance 0.4s linear 4.9s 1 normal forwards;
+          animation: appearance 0.4s linear 4.9s 1 normal forwards;
 }
 
 .tablet__block {
@@ -669,7 +648,7 @@ body {
   position: absolute;
   z-index: 3;
   -webkit-animation: tablet-block 0.4s linear 6.5s 1 normal forwards;
-  animation: tablet-block 0.4s linear 6.5s 1 normal forwards;
+          animation: tablet-block 0.4s linear 6.5s 1 normal forwards;
 }
 
 .tablet__border {
@@ -681,7 +660,7 @@ body {
   position: absolute;
   z-index: 3;
   -webkit-animation: tablet-border 0.4s linear 6.5s 1 normal forwards;
-  animation: tablet-border 0.4s linear 6.5s 1 normal forwards;
+          animation: tablet-border 0.4s linear 6.5s 1 normal forwards;
 }
 
 .tablet__like {
@@ -694,7 +673,7 @@ body {
   opacity: 0;
   z-index: 3;
   -webkit-animation: appearance 0.4s linear 5.6s 1 normal forwards;
-  animation: appearance 0.4s linear 5.6s 1 normal forwards;
+          animation: appearance 0.4s linear 5.6s 1 normal forwards;
 }
 
 .tablet__text {
@@ -706,7 +685,7 @@ body {
   position: absolute;
   z-index: 3;
   -webkit-animation: tablet-text 0.4s linear 5.9s 1 normal forwards;
-  animation: tablet-text 0.4s linear 5.9s 1 normal forwards;
+          animation: tablet-text 0.4s linear 5.9s 1 normal forwards;
 }
 
 .tablet__gear {
@@ -719,7 +698,7 @@ body {
   opacity: 0;
   z-index: 3;
   -webkit-animation: appearance 0.4s linear 6.2s 1 normal forwards;
-  animation: appearance 0.4s linear 6.2s 1 normal forwards;
+          animation: appearance 0.4s linear 6.2s 1 normal forwards;
 }
 
 @-webkit-keyframes tablet-p-text {
@@ -811,18 +790,18 @@ body {
   }
   .desktop {
     -webkit-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    transform: scale(0.9);
+        -ms-transform: scale(0.9);
+            transform: scale(0.9);
   }
   .watch {
     -webkit-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    transform: scale(0.9);
+        -ms-transform: scale(0.9);
+            transform: scale(0.9);
   }
   .tablet {
     -webkit-transform: scale(0.85);
-    -ms-transform: scale(0.85);
-    transform: scale(0.85);
+        -ms-transform: scale(0.85);
+            transform: scale(0.85);
   }
 }
 
@@ -832,23 +811,23 @@ body {
   }
   .desktop {
     -webkit-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
   }
   .phone {
     -webkit-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
   }
   .tablet {
     -webkit-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
   }
   .watch {
     -webkit-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
   }
 }
 
@@ -859,13 +838,13 @@ body {
   .row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .desktop {
     -webkit-transform: scale(0.7);
-    -ms-transform: scale(0.7);
-    transform: scale(0.7);
+        -ms-transform: scale(0.7);
+            transform: scale(0.7);
   }
 }
 
@@ -875,22 +854,22 @@ body {
   }
   .desktop {
     -webkit-transform: scale(0.6);
-    -ms-transform: scale(0.6);
-    transform: scale(0.6);
+        -ms-transform: scale(0.6);
+            transform: scale(0.6);
   }
   .watch {
     -webkit-transform: scale(0.6);
-    -ms-transform: scale(0.6);
-    transform: scale(0.6);
+        -ms-transform: scale(0.6);
+            transform: scale(0.6);
   }
   .phone {
     -webkit-transform: scale(0.6);
-    -ms-transform: scale(0.6);
-    transform: scale(0.6);
+        -ms-transform: scale(0.6);
+            transform: scale(0.6);
   }
   .tablet {
     -webkit-transform: scale(0.55);
-    -ms-transform: scale(0.55);
-    transform: scale(0.55);
+        -ms-transform: scale(0.55);
+            transform: scale(0.55);
   }
 }
