@@ -269,26 +269,28 @@ body {
 
 .watch__screen1 {
   background: url("../img/watch/screen1.png") center center/contain no-repeat;
-  width: 186.3px;
-  height: 231.1px;
-  bottom: 107px;
-  right: 158px;
   position: absolute;
   -webkit-animation: screen1 0.5s linear 7.7s 1 normal forwards;
           animation: screen1 0.5s linear 7.7s 1 normal forwards;
-  z-index: 4;
+  width: 100.4px;
+  height: 129.5px;
+  opacity: 0;
+  bottom: 206px;
+  right: 317px;
+  z-index: 1;
 }
 
 .watch__screen2 {
   background: url("../img/watch/screen2.png") center center/contain no-repeat;
-  width: 186.3px;
-  height: 231.1px;
-  bottom: 107px;
-  right: 158px;
   position: absolute;
   -webkit-animation: screen2 0.5s linear 8.2s 1 normal forwards;
           animation: screen2 0.5s linear 8.2s 1 normal forwards;
-  z-index: 3;
+  width: 100.4px;
+  height: 129.5px;
+  opacity: 0;
+  bottom: 38px;
+  right: 71px;
+  z-index: 1;
 }
 
 .watch__screen3 {
@@ -329,62 +331,50 @@ body {
 }
 
 @-webkit-keyframes screen1 {
-  80% {
+  35% {
     opacity: 1;
-    z-index: 4;
   }
   100% {
+    opacity: 1;
     width: 145.4px;
     height: 180.5px;
-    bottom: 206px;
-    right: 317px;
-    z-index: 1;
-    opacity: 0.7;
   }
 }
 
 @keyframes screen1 {
-  80% {
+  35% {
     opacity: 1;
-    z-index: 4;
   }
   100% {
+    opacity: 1;
     width: 145.4px;
     height: 180.5px;
-    bottom: 206px;
-    right: 317px;
-    z-index: 1;
-    opacity: 0.7;
   }
 }
 
 @-webkit-keyframes screen2 {
-  80% {
+  35% {
     opacity: 1;
-    z-index: 3;
   }
   100% {
+    opacity: 1;
     width: 145.4px;
     height: 180.5px;
     bottom: -11px;
     right: 56px;
-    z-index: 1;
-    opacity: 0.7;
   }
 }
 
 @keyframes screen2 {
-  80% {
+  35% {
     opacity: 1;
-    z-index: 3;
   }
   100% {
+    opacity: 1;
     width: 145.4px;
     height: 180.5px;
     bottom: -11px;
     right: 56px;
-    z-index: 1;
-    opacity: 0.7;
   }
 }
 
@@ -443,12 +433,13 @@ body {
 
 .phone__text-purple {
   background: url("../img/phone/textP.png") center center/contain no-repeat;
-  width: 86px;
-  height: 108px;
-  top: 148px;
-  right: 86px;
   position: absolute;
-  z-index: 3;
+  width: 65px;
+  height: 85px;
+  opacity: 0;
+  top: 280px;
+  right: -5px;
+  z-index: 1;
   -webkit-animation: text-purple 0.5s linear 3.4s 1 normal forwards;
           animation: text-purple 0.5s linear 3.4s 1 normal forwards;
 }
@@ -479,12 +470,13 @@ body {
 
 .phone__video {
   background: url("../img/phone/video.png") center center/contain no-repeat;
-  width: 89px;
-  height: 67px;
-  top: 158px;
-  left: 91px;
   position: absolute;
-  z-index: 3;
+  width: 74px;
+  height: 57px;
+  top: 221px;
+  left: -11px;
+  opacity: 0;
+  z-index: 1;
   -webkit-animation: video-phone 0.5s linear 3s 1 normal forwards;
           animation: video-phone 0.5s linear 3s 1 normal forwards;
 }
@@ -516,62 +508,48 @@ body {
 }
 
 @-webkit-keyframes video-phone {
-  80% {
+  35% {
     opacity: 1;
-    z-index: 3;
   }
   100% {
+    opacity: 1;
+    left: -27px;
     width: 124px;
     height: 90px;
-    top: 221px;
-    left: -27px;
-    z-index: 1;
-    opacity: 0.7;
   }
 }
 
 @keyframes video-phone {
-  80% {
+  35% {
     opacity: 1;
-    z-index: 3;
   }
   100% {
+    opacity: 1;
+    left: -27px;
     width: 124px;
     height: 90px;
-    top: 221px;
-    left: -27px;
-    z-index: 1;
-    opacity: 0.7;
   }
 }
 
 @-webkit-keyframes text-purple {
-  80% {
+  35% {
     opacity: 1;
-    z-index: 3;
   }
   100% {
     width: 104px;
     height: 129px;
-    top: 280px;
-    right: -5px;
-    z-index: 1;
-    opacity: 0.7;
+    opacity: 1;
   }
 }
 
 @keyframes text-purple {
-  80% {
+  35% {
     opacity: 1;
-    z-index: 3;
   }
   100% {
     width: 104px;
     height: 129px;
-    top: 280px;
-    right: -5px;
-    z-index: 1;
-    opacity: 0.7;
+    opacity: 1;
   }
 }
 
@@ -616,12 +594,13 @@ body {
 
 .tablet__text-purple {
   background: url("../img/tablet/purpleText.png") 0 0/cover no-repeat;
-  width: 123px;
-  height: 112px;
-  bottom: 124px;
-  left: 94px;
   position: absolute;
-  z-index: 3;
+  opacity: 0;
+  z-index: 1;
+  bottom: 129px;
+  left: -11px;
+  width: 85px;
+  height: 73px;
   -webkit-animation: tablet-p-text 0.5s linear 5.2s 1 normal forwards;
           animation: tablet-p-text 0.5s linear 5.2s 1 normal forwards;
 }
@@ -702,32 +681,24 @@ body {
 }
 
 @-webkit-keyframes tablet-p-text {
-  80% {
+  35% {
     opacity: 1;
-    z-index: 3;
   }
   100% {
+    opacity: 1;
     width: 104px;
     height: 129px;
-    bottom: 129px;
-    left: -11px;
-    z-index: 1;
-    opacity: 0.7;
   }
 }
 
 @keyframes tablet-p-text {
-  80% {
+  35% {
     opacity: 1;
-    z-index: 3;
   }
   100% {
+    opacity: 1;
     width: 104px;
     height: 129px;
-    bottom: 129px;
-    left: -11px;
-    z-index: 1;
-    opacity: 0.7;
   }
 }
 
