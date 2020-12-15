@@ -295,14 +295,15 @@ body {
 
 .watch__screen3 {
   background: url("../img/watch/screen3.png") center center/contain no-repeat;
-  width: 186.3px;
-  height: 231.1px;
-  bottom: 107px;
-  right: 158px;
   position: absolute;
-  -webkit-animation: screen3 0.5s linear 9s 1 normal forwards;
-          animation: screen3 0.5s linear 9s 1 normal forwards;
-  z-index: 1;
+  z-index: 4;
+  opacity: 0;
+  -webkit-animation: appearance 0.5s linear 8.9s 1 normal forwards;
+          animation: appearance 0.5s linear 8.9s 1 normal forwards;
+  width: 107.2px;
+  height: 130.6px;
+  bottom: 317px;
+  right: 115px;
 }
 
 .watch__block {
@@ -375,32 +376,6 @@ body {
     height: 180.5px;
     bottom: -11px;
     right: 56px;
-  }
-}
-
-@-webkit-keyframes screen3 {
-  90% {
-    z-index: 1;
-  }
-  100% {
-    width: 107.2px;
-    height: 130.6px;
-    bottom: 317px;
-    right: 115px;
-    z-index: 4;
-  }
-}
-
-@keyframes screen3 {
-  90% {
-    z-index: 1;
-  }
-  100% {
-    width: 107.2px;
-    height: 130.6px;
-    bottom: 317px;
-    right: 115px;
-    z-index: 4;
   }
 }
 
